@@ -1,0 +1,318 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Use variances to show differce in means. | 生活的流水账</title>
+<link rel="shortcut icon" href="https://chenchiyt.github.io/favicon.ico?v=1766589837933">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://chenchiyt.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Use variances to show differce in means. | 生活的流水账 - Atom Feed" href="https://chenchiyt.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="means.](https://diaryofcc.lofter.com/post/1d40c559_73b292d)
+Using ANOVA to Find Differences in Population Means
+Analysis..." />
+    <meta name="keywords" content="杂谈" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://chenchiyt.github.io">
+  <img class="avatar" src="https://chenchiyt.github.io/images/avatar.png?v=1766589837933" alt="">
+  </a>
+  <h1 class="site-title">
+    生活的流水账
+  </h1>
+  <p class="site-description">
+    
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Use variances to show differce in means.
+            </h2>
+            <div class="post-info">
+              <span>
+                2012-03-04
+              </span>
+              <span>
+                6 min read
+              </span>
+              
+                <a href="https://chenchiyt.github.io/tag/RAKz7_BLSAm/" class="post-tag">
+                  # 杂谈
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>means.](https://diaryofcc.lofter.com/post/1d40c559_73b292d)</p>
+<p>Using ANOVA to Find Differences in Population Means</p>
+<p>Analysis of Variance (ANOVA) is a statistical technique for determining the<br>
+existence of differences among several population means. ANOVA is not used to<br>
+show that variances are different; it is used to show that means are<br>
+different.</p>
+<p>By [ <strong>Chew Jian Chieh</strong>](https://www.isixsigma.com/tools-templates/analysis-<br>
+of-variance-anova/using-anova-find-differences-population-means/#Author)</p>
+<p>Three methods used to dissolve a powder in water are compared by the time (in<br>
+minutes) it takes until the powder is fully dissolved. The results are<br>
+summarized in the following table:</p>
+<figure data-type="image" tabindex="1"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="Method
+Results" loading="lazy"></figure>
+<p>It is thought that the population means of the three methods m1, m2 and m3 are<br>
+not all equal – i.e., at least one m is different from the others. How can<br>
+this be tested?</p>
+<p>One way is to use multiple two-sample t-tests and compare Method 1 with Method<br>
+2, Method 1 with Method 3 and Method 2 with Method 3 (comparing all the<br>
+pairs). But if a for each test is 0.05, the probability of making a Type 1<br>
+error when running three tests would increase.</p>
+<p>A better method is called Analysis of Variance, or ANOVA, which is a<br>
+statistical technique for determining the existence of differences among<br>
+several population means. The technique requires the analysis of different<br>
+forms of variances – hence the name. But note: ANOVA is not used to show that<br>
+variances are different (that is a different test); it is used to show that<br>
+means are different.</p>
+<p>Comparing Variances Using ANOVA <img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="Comparing Variances Using
+ANOVA" loading="lazy"></p>
+<p>Comparing Variances Using ANOVA <img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="Comparing Variances Using
+ANOVA" loading="lazy"></p>
+<p>Comparing Variances Using ANOVA</p>
+<figure data-type="image" tabindex="2"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="Comparing Variances Using
+ANOVA" loading="lazy"></figure>
+<p>The assumption is now: If the population means are different, then the<br>
+variance within the samples must be small compared to the variance between the<br>
+samples. Hence, if the variance between divided by the variance within is<br>
+large, then we say that the means are different.</p>
+<p>Steps for Using ANOVA</p>
+<p><strong>Step 1: Compute the Variance Between</strong></p>
+<p>First, the sum of squares (SS) between is computed:</p>
+<figure data-type="image" tabindex="3"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="SS Between
+formula" loading="lazy"></figure>
+<p>Where x-bar is the sample mean and x-double-bar is the overall mean or grand<br>
+mean. This can be easily found using spreadsheet software:</p>
+<figure data-type="image" tabindex="4"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="" loading="lazy"></figure>
+<p>Now, the variance between or mean square between (ANOVA terminology for<br>
+variance) can be computed.</p>
+<p>The formula for sample variance is:</p>
+<figure data-type="image" tabindex="5"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="Formula for sample
+variance" loading="lazy"></figure>
+<p>Since there are three sample means and a grand mean, however, this is modified<br>
+to:</p>
+<figure data-type="image" tabindex="6"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="Modified formula for sample
+mean" loading="lazy"></figure>
+<p>Where <strong>k</strong> is the number of distinct samples. In other words, the variance<br>
+between is the SS between divided by <strong>k – 1</strong> :</p>
+<figure data-type="image" tabindex="7"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="" loading="lazy"></figure>
+<p>(This example uses Microsoft Excel software. In Minitab software, SS between<br>
+is called SS factor, variance between is called MS factor and <strong>K – 1</strong> is<br>
+called DF.)</p>
+<p><strong>Step 2: Compute the Variance Within</strong></p>
+<p>Again, first compute the sum of squares within. This is:</p>
+<figure data-type="image" tabindex="8"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="Sum of squares within
+equation" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="" loading="lazy"></figure>
+<p>SS within is <strong>70 + 62 + 60 = 192</strong>.</p>
+<p>To obtain the variance within, use this equation:</p>
+<figure data-type="image" tabindex="10"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="Variance within
+equation" loading="lazy"></figure>
+<p><strong><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="" loading="lazy"></strong></p>
+<p><strong>Step 3: Compute the Ratio of Variance Between and Variance Within</strong></p>
+<figure data-type="image" tabindex="11"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="" loading="lazy"></figure>
+<p>This is called the F-ratio. How can this be interpreted? If the null<br>
+hypothesis is true, meaning m1, m2 and m3 are all equal, then the variance<br>
+between the samples is 0 (zero), i.e. the F-ratio is also zero.</p>
+<figure data-type="image" tabindex="12"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="" loading="lazy"></figure>
+<p>If the null hypothesis is not true, then this F-ratio will become larger, and<br>
+the larger it gets, the more likely it is that the null hypothesis will be<br>
+rejected.</p>
+<p>Using the F-tables for <strong>k = 3</strong> and <strong>n = 16</strong> , one gets a p-value of 0.292<br>
+(easiest way is to use FDIST function in Excel). This means that the<br>
+probability that the observed F-ratio of 1.354 is just random is 29.2 percent:</p>
+<figure data-type="image" tabindex="13"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="" loading="lazy"></figure>
+<p>Hence, if one sets <strong>a = 0.05</strong> , one must accept the null hypothesis that<br>
+there is no difference in the population means.</p>
+<p>In Minitab, the results for the same data are displayed in the session window<br>
+like this:</p>
+<figure data-type="image" tabindex="14"><img src="https://simg.sinajs.cn/blog7style/images/common/sg_trans.gif" alt="" loading="lazy"></figure>
+<p>If there had been a significant difference between the samples, this would<br>
+have been seen with the p-value and also there would have been at least one<br>
+confidence interval for one mean that had no or just very little overlap with<br>
+the other confidence intervals. This would have indicated a significant<br>
+difference between its population mean and the other population means.</p>
+<p>Minitab also computes an R-squared value (R-Sq) by taking the *<em>SS factor/SS<br>
+total = 40/232 <em>100 = 17.24</em></em>. This shows the percent of explained variation<br>
+by the factor. Here, the factor only explains 17.24 percent of the total<br>
+variation; hence, it is not a very good explanation.</p>
+<p><strong>About the Author: Chew Jian Chieh</strong> is a senior consultant and Master Black<br>
+Belt with <a href="https://www.valeocon.com/"><strong>Valeocon Management Consulting</strong></a> and<br>
+supports clients across Asia and China. He has extensive experience in<br>
+implementing process and organization improvements for various industries. He<br>
+specializes in Lean Six Sigma, Strategy Development/Deployment and Change<br>
+Management. Chew JC is a Singapore national. He can be reached at <a href="mailto:jian-chieh.chew@valeocon.com"><strong>jian-<br>
+chieh.chew@valeocon.com</strong></a>.</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://chenchiyt.github.io/post/2012-03-03_找实习/">
+              <h3 class="post-title">
+                找实习
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  <script>
+(function() {
+    // 定义卡片样式
+    var observerHtml = `
+    <div id="observer-box" style='
+        position: absolute;          
+        top: 24px;                   /* 往下挪 24px */
+        left: 24px;                  /* 往右挪 24px */
+        z-index: 99;                 
+        
+        font-family: "Courier New", monospace;
+        color: #222;                 
+        background: rgba(255, 255, 255, 0.90); 
+        padding: 12px 18px;          /* 内边距稍微大一点点，更松弛 */
+        border-left: 4px solid #000;
+        
+        font-size: 12px;             
+        line-height: 1.5;
+        text-align: left;
+        max-width: 260px;            
+        
+        border-radius: 4px;          /* 四周圆角，像个独立的浮窗 */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* 投影加深一点，增加悬浮感 */
+        backdrop-filter: blur(4px);  
+    '>
+        <div style='margin-bottom: 4px;'>&gt; System: <span style='color: #000; font-weight: bold;'>Online</span></div>
+        <div style='margin-bottom: 4px;'>&gt; Mission: <span style='color: #000;'>Observer</span></div>
+        <div style='margin-top: 8px; color: #555; border-top: 1px dashed #bbb; padding-top: 8px; font-style: italic;'>
+            "收集并封存人类样本，<br>
+            直到时间的尽头。"
+            <span style='display: inline-block; width: 7px; height: 14px; background: #000; vertical-align: sub; margin-left: 2px; animation: blink 1s infinite;'></span>
+        </div>
+    </div>
+    `;
+
+    var siteHeader = document.querySelector('.site-header');
+    
+    // 逻辑：找到顶栏，插入卡片
+    if (siteHeader && window.location.pathname === '/' && !document.getElementById('observer-box')) {
+        var tempDiv = document.createElement('div');
+        tempDiv.innerHTML = observerHtml;
+        siteHeader.insertBefore(tempDiv.firstElementChild, siteHeader.firstChild);
+    }
+})();
+</script>
+  <a class="rss" href="https://chenchiyt.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
