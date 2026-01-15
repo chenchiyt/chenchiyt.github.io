@@ -1,0 +1,15 @@
+---
+title: "Im grateful"
+date: 2012-06-18 12:00:00
+tags: [杂谈]
+published: true
+hideInList: false
+feature: 
+---
+终于得到了一个难得的机会，而且是自己喜欢的事情。
+
+虽然未来还是说不定，但是起码现在有了一个努力的方向了。
+
+等待的事情终于来临了，难道不值得高兴么？？
+
+Pull it up, 上路。
