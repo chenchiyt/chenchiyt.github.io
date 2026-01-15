@@ -1,6 +1,5 @@
 ---
-title: Welcome to Quartz
+title: 俺的数字世界
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+![[1.png]]
