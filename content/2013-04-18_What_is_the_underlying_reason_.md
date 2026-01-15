@@ -1,16 +1,9 @@
 ---
 title: "What is the underlying reason a customer would do"
-date: 2013-04-18 12:00:00
+date: 2013-04-18
 tags: 
-published: true
-hideInList: false
-feature: 
 ---
 ](https://diaryofcc.lofter.com/post/1d40c559_73b28ea)
-
-
-
-
 
 **1) Define Your Business and Vision**
 

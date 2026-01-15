@@ -1,10 +1,7 @@
 ---
 title: "Lesson well learned"
-date: 2013-03-03 12:00:00
+date: 2013-03-03
 tags: 
-published: true
-hideInList: false
-feature: 
 ---
 没想到的啊，故事后面的故事。
 

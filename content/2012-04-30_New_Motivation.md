@@ -1,10 +1,7 @@
 ---
 title: "New Motivation"
-date: 2012-04-30 12:00:00
+date: 2012-04-30
 tags: [杂谈]
-published: true
-hideInList: false
-feature: 
 ---
 I've got a new motivation.
 

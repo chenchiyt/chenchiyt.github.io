@@ -1,10 +1,7 @@
 ---
 title: '20251216迁移到 Gridea+Github，外加对自己的深刻洞察'
-date: 2025-12-16 15:44:44
+date: 2025-12-16
 tags: []
-published: true
-hideInList: false
-feature: 
 isTop: false
 ---
 # Part 1
@@ -43,4 +40,3 @@ isTop: false
 # Part 5 迁移到 G+G，博客会死吗？
 就算 Gridea 不更新了，博客也不会死，这是静态博客的魅力，static site generator。
 所有 md文件都在，真的打不开了，随时迁移都可以。
-

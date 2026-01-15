@@ -1,16 +1,9 @@
 ---
 title: "ForwardHow to expand your network"
-date: 2011-02-26 12:00:00
+date: 2011-02-26
 tags: [杂谈]
-published: true
-hideInList: false
-feature: 
 ---
 network](https://diaryofcc.lofter.com/post/1d40c559_73b2944)
-
-
-
-
 
 After I chose the MPH degree instead of PHD with money, I knew that I've
 pushed myself to a total different world, for which I am an absolute beginner.

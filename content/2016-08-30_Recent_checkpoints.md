@@ -1,10 +1,7 @@
 ---
 title: "Recent checkpoints"
-date: 2016-08-30 12:00:00
+date: 2016-08-30
 tags: 
-published: true
-hideInList: false
-feature: 
 ---
 产品在PTT方向狂奔一个月，貌似在B端反响不错，但是老板出差半夜兴奋就折腾人。
 

@@ -1,16 +1,9 @@
 ---
 title: "Valentines Day dipped in Sorrow"
-date: 2011-02-14 12:00:00
+date: 2011-02-14
 tags: [杂谈]
-published: true
-hideInList: false
-feature: 
 ---
 Sorrow](https://diaryofcc.lofter.com/post/1d40c559_73b2946)
-
-
-
-
 
 I logged in, I checked your blog, I saw nothing.
 

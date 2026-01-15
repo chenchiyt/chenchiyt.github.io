@@ -1,16 +1,9 @@
 ---
 title: "My question on Yahoo Answer and reply"
-date: 2009-05-07 12:00:00
+date: 2009-05-07
 tags: [杂谈]
-published: true
-hideInList: false
-feature: 
 ---
 reply](https://diaryofcc.lofter.com/post/1d40c559_73b29a7)
-
-
-
-
 
 How can I better my chance of getting a "offer" for graduate school?
 

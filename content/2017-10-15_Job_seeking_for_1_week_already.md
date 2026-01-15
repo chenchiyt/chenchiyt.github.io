@@ -1,16 +1,9 @@
 ---
 title: "Job seeking for 1 week already"
-date: 2017-10-15 12:00:00
+date: 2017-10-15
 tags: 
-published: true
-hideInList: false
-feature: 
 ---
 already](https://diaryofcc.lofter.com/post/1d40c559_1163a120)
-
-
-
-
 
 This time I am serious.
 

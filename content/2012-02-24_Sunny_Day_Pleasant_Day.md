@@ -1,10 +1,7 @@
 ---
 title: "Sunny Day Pleasant Day"
-date: 2012-02-24 12:00:00
+date: 2012-02-24
 tags: 
-published: true
-hideInList: false
-feature: 
 ---
 mei na dian nao, bu hao yi si you dei yong yin wen.  
   

@@ -1,10 +1,7 @@
 ---
 title: 'My Strategy下一盘很大的棋'
-date: 2025-12-19 23:53:25
+date: 2025-12-19
 tags: []
-published: true
-hideInList: false
-feature: 
 isTop: false
 ---
 这个布局的精妙之处：

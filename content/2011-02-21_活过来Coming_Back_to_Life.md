@@ -1,10 +1,7 @@
 ---
 title: "活过来Coming Back to Life"
-date: 2011-02-21 12:00:00
+date: 2011-02-21
 tags: [杂谈]
-published: true
-hideInList: false
-feature: 
 ---
 我个人以为，从去年4月份出淡出实验室了以后，我就慢慢的开始减缓了自己的步伐，到现在，基本已经停滞。
 

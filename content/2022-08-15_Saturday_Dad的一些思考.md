@@ -1,10 +1,7 @@
 ---
 title: "Saturday Dad的一些思考"
-date: 2022-08-15 12:00:00
+date: 2022-08-15
 tags: 
-published: true
-hideInList: false
-feature: 
 ---
 周六带娃，长期周六带娃，我大概可以被称作一个星期六老爸。
 

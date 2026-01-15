@@ -1,10 +1,7 @@
 ---
 title: "Given the opportunity"
-date: 2012-04-16 12:00:00
+date: 2012-04-16
 tags: [杂谈]
-published: true
-hideInList: false
-feature: 
 ---
 President of CSUE mentioned to me the opportunity to take over the position
 next semester.  

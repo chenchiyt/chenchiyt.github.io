@@ -1,10 +1,7 @@
 ---
 title: "写完了Risk Assessment的作业"
-date: 2012-10-03 12:00:00
+date: 2012-10-03
 tags: [杂谈]
-published: true
-hideInList: false
-feature: 
 ---
 我觉得这个作业就是从复杂的语句中提炼出最简单意思的锻炼。。。
 

@@ -1,16 +1,9 @@
 ---
 title: "Use variances to show differce in means."
-date: 2012-03-04 12:00:00
+date: 2012-03-04
 tags: [杂谈]
-published: true
-hideInList: false
-feature: 
 ---
 means.](https://diaryofcc.lofter.com/post/1d40c559_73b292d)
-
-
-
-
 
 Using ANOVA to Find Differences in Population Means
 

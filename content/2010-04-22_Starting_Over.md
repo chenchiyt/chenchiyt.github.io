@@ -1,10 +1,7 @@
 ---
 title: "Starting Over"
-date: 2010-04-22 12:00:00
+date: 2010-04-22
 tags: [杂谈]
-published: true
-hideInList: false
-feature: 
 ---
 I'm starting over, after the wave of Toefl has passed, and the failure of
 several attempts of my research. Everything ended at 9 p.m today, and starts

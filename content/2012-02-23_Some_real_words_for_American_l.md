@@ -1,16 +1,9 @@
 ---
 title: "Some real words for American life"
-date: 2012-02-23 12:00:00
+date: 2012-02-23
 tags: [杂谈]
-published: true
-hideInList: false
-feature: 
 ---
 life](https://diaryofcc.lofter.com/post/1d40c559_73b2930)
-
-
-
-
 
 What Amit told me today cause a real blizzard in me.
 

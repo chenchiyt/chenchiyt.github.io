@@ -1,10 +1,7 @@
 ---
 title: "转自httpdesign.yesky.comphotoshop3062192306."
-date: 2009-03-28 12:00:00
+date: 2009-03-28
 tags: [杂谈]
-published: true
-hideInList: false
-feature: 
 ---
 用Photoshop通道将模糊肖像照片清晰化
 

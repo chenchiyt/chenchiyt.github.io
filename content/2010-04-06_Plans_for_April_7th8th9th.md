@@ -1,16 +1,9 @@
 ---
 title: "Plans for April 7th8th9th"
-date: 2010-04-06 12:00:00
+date: 2010-04-06
 tags: [杂谈]
-published: true
-hideInList: false
-feature: 
 ---
 7th,8th,9th](https://diaryofcc.lofter.com/post/1d40c559_73b297d)
-
-
-
-
 
 There are three days to the tests and I think I still need to do something to
 get prepared.

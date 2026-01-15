@@ -1,16 +1,9 @@
 ---
 title: "After chatting wilth Aljk"
-date: 2017-05-17 12:00:00
+date: 2017-05-17
 tags: 
-published: true
-hideInList: false
-feature: 
 ---
 Aljk](https://diaryofcc.lofter.com/post/1d40c559_fb15c6a)
-
-
-
-
 
 和aljk聊了一下，他们只专注线上医药的销售。
 

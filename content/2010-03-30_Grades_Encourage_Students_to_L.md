@@ -1,16 +1,9 @@
 ---
 title: "Grades Encourage Students to Learn"
-date: 2010-03-30 12:00:00
+date: 2010-03-30
 tags: [教育]
-published: true
-hideInList: false
-feature: 
 ---
 Learn](https://diaryofcc.lofter.com/post/1d40c559_73b297e)
-
-
-
-
 
 (I don't feel myself so physically fit now, so just practice on Toefl Writing,
 on bed, half-lying)
