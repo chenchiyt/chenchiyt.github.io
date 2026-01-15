@@ -1,3 +1,20 @@
+// 这是一个让文章列表变成卡片风格的简单 CSS
 @use "./base.scss";
 
-// put your custom CSS here!
+// 让侧边栏变透明一点
+.left, .right {
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  &:hover { opacity: 1; }
+}
+
+// 这里的代码会让你的引用块（Callout）变得更好看
+.callout {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+// 给所有图片加圆角
+img {
+  border-radius: 8px;
+}
