@@ -38,7 +38,20 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    // --- 修改开始：自定义 Explorer ---
+    Component.Explorer({
+      title: "文章列表", // 这里改左侧标题
+      folderDefaultState: "open", // 默认展开文件夹
+      sortFn: (a, b) => {
+        // 尝试获取日期，如果没有日期则作为很久以前
+        const dateA = a.file?.frontmatter?.date ? new Date(a.file.frontmatter.date) : new Date(0)
+        const dateB = b.file?.frontmatter?.date ? new Date(b.file.frontmatter.date) : new Date(0)
+        
+        // 倒序排列：日期大的（新的）排在前面
+        return dateB.getTime() - dateA.getTime()
+      },
+    }),
+    // --- 修改结束 ---
   ],
   right: [
     Component.Graph(),
@@ -62,7 +75,17 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    // --- 修改开始：列表页也要保持一致 ---
+    Component.Explorer({
+      title: "文章列表",
+      folderDefaultState: "open",
+      sortFn: (a, b) => {
+        const dateA = a.file?.frontmatter?.date ? new Date(a.file.frontmatter.date) : new Date(0)
+        const dateB = b.file?.frontmatter?.date ? new Date(b.file.frontmatter.date) : new Date(0)
+        return dateB.getTime() - dateA.getTime()
+      },
+    }),
+    // --- 修改结束 ---
   ],
   right: [],
 }
