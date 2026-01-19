@@ -17,7 +17,13 @@ const config: QuartzConfig = {
     },
     locale: "zh-CN",
     baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: [
+      "private", 
+      "templates", 
+      ".obsidian", 
+      "copilot",      // 排除 Copilot 插件生成的文件夹
+      "attachments"   // 如果你不想发布附件文件夹也可以加上
+    ],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
