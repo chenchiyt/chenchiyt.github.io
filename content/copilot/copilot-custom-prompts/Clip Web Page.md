@@ -53,3 +53,4 @@ mindmap
 <List 3-5 notable quotes from the content, if any>
 
 Return only the markdown content without any explanations or comments.
+Return with original language.
