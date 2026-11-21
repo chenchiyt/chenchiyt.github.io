@@ -1,20 +1,427 @@
-// 这是一个让文章列表变成卡片风格的简单 CSS
 @use "./base.scss";
 
-// 让侧边栏变透明一点
-.left, .right {
-  opacity: 0.8;
-  transition: opacity 0.2s;
-  &:hover { opacity: 1; }
+:root:root {
+  --bodyFont: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --headerFont: var(--bodyFont);
+  --titleFont: var(--bodyFont);
+  --codeFont: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
-
-// 这里的代码会让你的引用块（Callout）变得更好看
-.callout {
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+html {
+  width: 100%;
+  scroll-padding-top: 2rem;
 }
-
-// 给所有图片加圆角
-img {
-  border-radius: 8px;
+body {
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  box-sizing: border-box;
+}
+a,
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+.page {
+  max-width: 100%;
+  padding: 0 32px;
+  > #quartz-body {
+    display: block;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+    .sidebar.left {
+      display: none;
+    }
+    .center {
+      min-width: 0;
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+    }
+    .page-header {
+      margin: 0;
+      padding: 0;
+    }
+    .sidebar.right {
+      position: fixed;
+      top: 230px;
+      left: calc(50% + 414px);
+      width: 190px;
+      height: auto;
+      max-height: calc(100vh - 270px);
+      padding: 0;
+      display: flex;
+      .toc {
+        display: flex;
+        font-size: 12px;
+        max-height: calc(100vh - 270px);
+      }
+    }
+    footer {
+      margin: 72px 0 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--lightgray);
+      opacity: 1;
+      font-size: 12px;
+      color: var(--gray);
+    }
+  }
+}
+.page-header > header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0 0 76px;
+  padding: 32px 0 24px;
+  border-bottom: 1px solid var(--lightgray);
+  .blog-masthead {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .blog-brand {
+    color: var(--dark);
+    font-size: 16px;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: var(--gray);
+    font-size: 13px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  nav a:hover,
+  nav a[aria-current="page"] {
+    color: var(--dark);
+  }
+  nav a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 1px;
+  }
+  .darkmode {
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .search {
+    min-width: 24px;
+    max-width: none;
+    flex-grow: 0;
+  }
+  .search-button {
+    border: 0;
+    width: 24px;
+    height: 28px;
+    padding: 0;
+    justify-content: center;
+  }
+  .search-button p {
+    display: none;
+  }
+  .search-button svg {
+    margin: 0;
+    width: 18px;
+  }
+}
+.article-title {
+  font-size: clamp(27px, 4vw, 36px);
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+  font-weight: 650;
+  margin: 0 0 18px;
+  overflow-wrap: anywhere;
+}
+.content-meta {
+  color: var(--gray);
+  font-size: 13px;
+  margin: 0 0 14px;
+}
+.tags {
+  font-size: 12px;
+  gap: 10px;
+}
+a.internal.tag-link {
+  background: none;
+  padding: 0;
+  font-weight: 400;
+  color: var(--gray);
+}
+.center > article {
+  margin-top: 40px;
+  font-size: 17px;
+  line-height: 1.9;
+}
+article {
+  p {
+    margin: 1.4em 0;
+  }
+  h2 {
+    font-size: 1.4em;
+    margin-top: 2.4em;
+    line-height: 1.5;
+  }
+  h3 {
+    font-size: 1.15em;
+    margin-top: 2em;
+    line-height: 1.6;
+  }
+  li {
+    margin: 0.45em 0;
+  }
+  a.internal:not(.tag-link) {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-color: var(--lightgray);
+    text-underline-offset: 4px;
+    line-height: inherit;
+  }
+  a:hover {
+    text-decoration-color: var(--secondary) !important;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 2px;
+    margin: 2rem auto;
+  }
+  blockquote {
+    border-left: 2px solid var(--lightgray);
+    margin: 2rem 0;
+    padding: 0 0 0 1.3rem;
+    color: var(--gray);
+  }
+  pre {
+    border: 1px solid var(--lightgray);
+    border-radius: 3px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .callout {
+    border-radius: 3px;
+    box-shadow: none;
+  }
+}
+.center > hr {
+  margin-top: 64px;
+  background-color: var(--lightgray);
+}
+.page-footer {
+  margin: 0 !important;
+}
+body[data-slug="index"] {
+  .article-title {
+    margin-bottom: 24px;
+    font-size: 36px;
+    letter-spacing: -0.04em;
+  }
+  .center > article {
+    margin-top: 0;
+    color: var(--gray);
+    font-size: 15px;
+    line-height: 1.9;
+  }
+  .center > article p {
+    margin: 8px 0;
+    color: var(--gray);
+  }
+  .center > hr {
+    display: none;
+  }
+}
+.blog-index {
+  margin-top: 64px;
+}
+.archive-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 16px;
+}
+.archive-heading h2 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+.archive-heading span {
+  font-size: 12px;
+  color: var(--gray);
+}
+.archive-year {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 16px;
+  padding: 28px 0 18px;
+  border-bottom: 1px solid var(--lightgray);
+}
+.archive-year h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray);
+  margin: 8px 0 0;
+  font-variant-numeric: tabular-nums;
+}
+.archive-year ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.archive-year li {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 16px;
+  padding: 8px 0;
+}
+.archive-year time,
+.archive-year .undated {
+  font-size: 12px;
+  color: var(--gray);
+  font-variant-numeric: tabular-nums;
+}
+.archive-year a.internal {
+  background: none;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--dark);
+  overflow-wrap: anywhere;
+}
+.archive-year a:hover {
+  color: var(--secondary);
+}
+.archive-empty {
+  padding: 40px 0;
+  color: var(--gray);
+}
+.toc {
+  .toc-header h3 {
+    font-size: 12px;
+    color: var(--gray);
+    font-weight: 400;
+  }
+  .toc-header .fold {
+    width: 16px;
+  }
+  ul.toc-content > li > a {
+    opacity: 1;
+    color: var(--gray);
+    font-weight: 400;
+    line-height: 1.8;
+  }
+  ul.toc-content > li > a.in-view {
+    color: var(--secondary);
+  }
+}
+.section-ul {
+  padding: 0;
+}
+li.section-li {
+  margin: 16px 0;
+}
+.section-li .section {
+  grid-template-columns: 100px minmax(0, 1fr);
+}
+.section-li .section > .tags {
+  display: none;
+}
+.section-li .section h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.section-li .section .meta {
+  font-size: 12px;
+  color: var(--gray);
+}
+@media (max-width: 1240px) {
+  .page > #quartz-body .sidebar.right {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .page {
+    padding: 0 22px;
+  }
+  .page-header > header {
+    gap: 16px;
+    margin-bottom: 48px;
+    padding: 24px 0 20px;
+  }
+  .page-header > header .blog-masthead {
+    flex-wrap: wrap;
+    gap: 18px;
+    min-width: 0;
+  }
+  .blog-masthead nav {
+    width: 100%;
+    gap: 22px;
+  }
+  .page-header > header .blog-brand {
+    font-size: 15px;
+  }
+  body[data-slug="index"] .article-title {
+    font-size: 29px;
+  }
+  .center > article {
+    font-size: 17px;
+  }
+  .blog-index {
+    margin-top: 44px;
+  }
+  .archive-year {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-top: 22px;
+  }
+  .archive-year h3 {
+    margin: 0;
+    font-size: 12px;
+  }
+  .archive-year li {
+    gap: 12px;
+    grid-template-columns: 42px minmax(0, 1fr);
+    padding: 9px 0;
+  }
+  .archive-year a.internal {
+    font-size: 15px;
+  }
+  .section-li .section {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
 }
